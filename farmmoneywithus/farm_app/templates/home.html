@@ -1,0 +1,59 @@
+{% load static %}
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farming AI App</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="{% static 'js/script.js' %}" defer></script>
+</head>
+<body>
+
+<div id="sidebar" class="sidebar">
+    <!-- Location dropdown -->
+    <div class="title">Location</div>
+    <select id="location">
+
+    </select>
+
+
+    <div class="title">Climate</div>
+    <label for="temperature">Temperature:</label>
+    <input type="range" id="temperature" name="temperature" min="-50" max="50">
+    <label for="precipitation">Precipitation:</label>
+    <input type="range" id="precipitation" name="precipitation" min="0" max="200">
+
+
+    <div class="title">Market Conditions</div>
+    <label for="demand">Demand:</label>
+    <input type="range" id="demand" name="demand" min="0" max="100">
+    <label for="supply">Supply:</label>
+    <input type="range" id="supply" name="supply" min="0" max="100">
+    <label for="marketPrice">Market Price:</label>
+    <input type="range" id="marketPrice" name="marketPrice" min="0" max="1000">
+
+
+    <div class="title">Soil Type</div>
+    <select id="soilType">
+
+    </select>
+
+
+</div>
+
+<div id="toggleButton" class="toggle-button">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+</div>
+
+
+<div class="content">
+    {% block content %}
+
+    {% endblock %}
+</div>
+
+</body>
+</html>
