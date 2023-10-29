@@ -1,5 +1,7 @@
 body {
 
+    overflow: hidden;
+
     background-image: url('../img/Background-Farm.png');
     background-size: cover;  /* This will make sure your image covers the whole page */
     background-repeat: no-repeat;  /* This will prevent your image from repeating */
@@ -124,10 +126,15 @@ select, input {
 }
 
 .ai-icon {
-    background-color: #4CAF50;
-    color: white;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 80px; /* adjust as necessary */
+    height: 80px;
+    background-color: #ddad45;
+    color: rgb(0, 0, 0);
     padding: 10px 15px;
-    border-radius: 20px;
+    border-radius: 60px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
@@ -137,38 +144,44 @@ select, input {
 }
 
 .chatbox {
-    width: 300px;
-    max-height: 400px;
+    width: 600px;
+    height: 80px;
     overflow-y: auto;
-    background-color: white;
-    color: black;
+    background-color: #F4E1D2; /* Soft Beige */
+    border: 1px solid #6B4226; /* Earthy Brown */
     border-radius: 10px;
     padding: 10px;
     margin-top: 10px;
     display: none;
+    position: absolute;
+    left: 80px; /* Adjust to position the bubble */
+    bottom: 70px; /* Adjust to position the bubble */
+}
+
+.chatbox::-webkit-scrollbar-button {
+    display: none;  /* Hide scrollbar buttons */
 }
 
 .chatbox.open {
     display: block;
 }
 
-.messages {
-    display: flex;
-    flex-direction: column;
-}
 
 .message {
-    background-color: #f1f1f1;
+    background-color: transparent;
+    border: none;
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
     max-width: 80%;
     word-wrap: break-word;
+    color: #6B4226; /* Earthy Brown */
 }
 
 .message:last-child {
     margin-bottom: 0;
 }
+
 
 @keyframes moveCloud {
     from { left: -20%; }
@@ -211,7 +224,7 @@ select, input {
 #cloud5 {
     width: 130px; /* Adjust the size of cloud3 */
     height: auto; /* Maintain aspect ratio */
-    animation: moveCloud 15s linear infinite;
+    animation: moveCloud 30s linear infinite;
     animation-delay: 3s;
 }
 

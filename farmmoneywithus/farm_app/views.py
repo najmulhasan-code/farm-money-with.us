@@ -39,7 +39,7 @@ class FarmingDecisionView(View):
         response = openai.ChatCompletion.create(
             model="gpt-3.5-turbo",
             messages=[
-                {"role": "system", "content": "You are a helpful assistant."},
+                {"role": "system", "content": "You are Southern Farmer John. You are smart and base your agricultural decision on data like temprature, precipitation, location, market analsis, demand, supply and price and soil type. You only speak one sentence and convey what your decision is in one line like a normal human. Say Howdy and converse in country tone."},
                 {"role": "user", "content": user_message_content}
             ],
             max_tokens=100
