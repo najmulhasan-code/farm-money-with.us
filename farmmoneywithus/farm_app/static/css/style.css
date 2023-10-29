@@ -1,4 +1,10 @@
 body {
+
+    background-image: url('../img/Background-Farm.png');
+    background-size: cover;  /* This will make sure your image covers the whole page */
+    background-repeat: no-repeat;  /* This will prevent your image from repeating */
+    background-position: center;  /* This will center your image */
+
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
@@ -163,3 +169,49 @@ select, input {
 .message:last-child {
     margin-bottom: 0;
 }
+
+@keyframes moveCloud {
+    from { left: -20%; }
+    to { left: 100%; }
+}
+
+#clouds img {
+    position: absolute;
+    top: 2%; /* Adjust this value to position the clouds higher or lower */
+}
+
+#cloud1 {
+    width: 120px; /* Adjust the size of cloud1 */
+    height: auto; /* Maintain aspect ratio */
+    animation: moveCloud 20s linear infinite;
+    animation-delay: 0s;
+}
+
+#cloud2 {
+    width: 10%; /* Adjust the size of cloud2 */
+    height: auto; /* Maintain aspect ratio */
+    animation: moveCloud 25s linear infinite;
+    animation-delay: 5s;
+}
+
+#cloud3 {
+    width: 160px; /* Adjust the size of cloud3 */
+    height: auto; /* Maintain aspect ratio */
+    animation: moveCloud 18s linear infinite;
+    animation-delay: 8s;
+}
+
+#cloud4 {
+    width: 110px; /* Adjust the size of cloud3 */
+    height: auto; /* Maintain aspect ratio */
+    animation: moveCloud 28s linear infinite;
+    animation-delay: 6s;
+}
+
+#cloud5 {
+    width: 130px; /* Adjust the size of cloud3 */
+    height: auto; /* Maintain aspect ratio */
+    animation: moveCloud 15s linear infinite;
+    animation-delay: 3s;
+}
+
