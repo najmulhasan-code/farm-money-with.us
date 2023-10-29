@@ -1,5 +1,5 @@
 """
-URL configuration for farmmoneywithus project.
+URL configuration for green_grow_gain project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
@@ -19,7 +19,7 @@ from django.urls import include, path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('farm_app.urls')),
+    path('', include('green_app.urls')),
 ]
 
 

@@ -1,5 +1,5 @@
 """
-ASGI config for farmmoneywithus project.
+ASGI config for green_grow_gain project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'farmmoneywithus.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'green_grow_gain.settings')
 
 application = get_asgi_application()
