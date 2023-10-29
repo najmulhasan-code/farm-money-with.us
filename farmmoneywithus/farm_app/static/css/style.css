@@ -2,19 +2,24 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #36393f;
-    color: #dcddde;
+    background-color: #282c34;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .sidebar {
     position: fixed;
     top: 0;
-    right: -350px;
-    width: 320px;
+    right: -320px;
+    width: 300px;
     height: 100%;
-    background-color: #2f3136;
+    background-color: #3b3b3b;
     padding: 20px;
     transition: right 0.3s;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .sidebar.open {
@@ -23,28 +28,31 @@ body {
 
 .toggle-button {
     position: fixed;
-    top: 10px;
-    right: 20px;
+    top: 15px;
+    right: 15px;
     width: 30px;
     height: 30px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: #2f3136;
+    background-color: #3b3b3b;
     padding: 5px;
     cursor: pointer;
-    border-left: 1px solid #202225;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
 }
 
 .toggle-button .line {
     width: 30px;
     height: 5px;
-    background-color: #dcddde;
+    background-color: white;
 }
 
 .content {
     padding: 20px;
-    margin-left: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
 }
 
 .title {
@@ -55,9 +63,103 @@ body {
 
 select, input {
     width: 100%;
-    padding: 5px;
+    padding: 10px;
     margin-bottom: 20px;
-    border: 1px solid #202225;
-    background-color: #36393f;
-    color: #dcddde;
+    border: none;
+    border-radius: 5px;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #45a049;
+}
+
+.planting-steps {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.planting-steps button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.planting-steps button:hover {
+    background-color: #45a049;
+}
+
+.ai-farmer-chat {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.ai-icon {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.ai-icon:hover {
+    background-color: #45a049;
+}
+
+.chatbox {
+    width: 300px;
+    max-height: 400px;
+    overflow-y: auto;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+    display: none;
+}
+
+.chatbox.open {
+    display: block;
+}
+
+.messages {
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    background-color: #f1f1f1;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.message:last-child {
+    margin-bottom: 0;
 }
